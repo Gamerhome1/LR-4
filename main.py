@@ -18,3 +18,9 @@ def get_duplicates(d):
         else:
             result[(name, size)] = [path]
     return {k: v for k, v in result.items() if len(v) > 1}
+
+def get_results(d):
+    for k,v in d.items():
+        print(k)
+        print('\n'.join(['\t'+ i for i in v]))
+        print()
