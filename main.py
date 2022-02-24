@@ -7,7 +7,7 @@ def userpath():
         if os.path.exists(path1):
             break
         else:
-            print("Вы не правильно ввели путь")
+            print("Это не путь, либо путь некорректен")
     return path1
 
 
@@ -37,3 +37,7 @@ def get_results(d):
         print(k)
         print('\n'.join(['\t' + i for i in v]))
         print()
+
+
+if __name__ == '__main__':
+    print(get_results(get_duplicates(get_file_sizes(userpath()))))
